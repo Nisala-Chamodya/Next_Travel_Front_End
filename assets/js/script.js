@@ -143,6 +143,65 @@ breakpoints:{
 /*end vehicale slider */
 //end  regular section
 
+
+
+//start midlevel section section
+let midLevelBtn=document.querySelector("#midLevelBtn");
+let midLevelContainer=document.querySelector(".midlevel-container");
+let midLevelContainerClose=document.querySelector("#midlevel-close");
+
+midLevelBtn.addEventListener("click",()=>{
+    midLevelContainer.classList.add('active');
+});
+midLevelContainerClose.addEventListener("click",()=>{
+    midLevelContainer.classList.remove('active');
+});
+
+var swiper = new Swiper(".midlevel-slider", {
+spaceBetween:20,
+loop:true,
+autoplay:{
+    delay:2500,
+    disableOnInteraction:false,
+},
+breakpoints:{
+    640:{
+        slidesPerView:1,
+    },
+    768:{
+        slidesPerView:2,
+    },
+     1024:{
+        slidesPerView:3,
+    },
+},
+
+});
+/*start vehicale section  */
+var swiper = new Swiper(".midlevel-vehicale-section", {
+spaceBetween:20,
+loop:true,
+autoplay:{
+    delay:2500,
+    disableOnInteraction:false,
+},
+breakpoints:{
+    640:{
+        slidesPerView:1,
+    },
+    768:{
+        slidesPerView:2,
+    },
+     1024:{
+        slidesPerView:3,
+    },
+},
+
+});
+/*end vehicale section  */
+
+//end midlevel section section
+
 //////////////////////////////////////////
 
 /* home section start */
