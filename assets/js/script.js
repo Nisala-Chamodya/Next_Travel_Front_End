@@ -204,6 +204,128 @@ breakpoints:{
 
 //////////////////////////////////////////
 
+/*start luxury section*/
+////////////////////////////////////////
+let luxuryLevelBtn=document.querySelector("#luxuryLevelBtn");
+let luxuryLevelContainer=document.querySelector(".luxury-container");
+let luxuryLevelContainerClose=document.querySelector("#luxury-close");
+
+luxuryLevelBtn.addEventListener("click",()=>{
+    luxuryLevelContainer.classList.add('active');
+});
+luxuryLevelContainerClose.addEventListener("click",()=>{
+    luxuryLevelContainer.classList.remove('active');
+});
+
+var swiper = new Swiper(".luxury-slider", {
+spaceBetween:20,
+loop:true,
+autoplay:{
+    delay:2500,
+    disableOnInteraction:false,
+},
+breakpoints:{
+    640:{
+        slidesPerView:1,
+    },
+    768:{
+        slidesPerView:2,
+    },
+     1024:{
+        slidesPerView:3,
+    },
+},
+
+});
+
+/*start vehicale section  */
+var swiper = new Swiper(".luxury-vehicale-section ", {
+spaceBetween:20,
+loop:true,
+autoplay:{
+    delay:2500,
+    disableOnInteraction:false,
+},
+breakpoints:{
+    640:{
+        slidesPerView:1,
+    },
+    768:{
+        slidesPerView:2,
+    },
+     1024:{
+        slidesPerView:3,
+    },
+},
+
+});
+/*end vehicale section  */
+
+
+
+/*end luxury section*/
+
+/////////////////////////////////////////
+/*start super luxury section */
+
+let superluxuryLevelBtn=document.querySelector("#superLuxuryLevelBtn");
+let superluxuryLevelContainer=document.querySelector(".super-luxury-container");
+let superluxuryLevelContainerClose=document.querySelector("#super-luxury-close");
+
+superluxuryLevelBtn.addEventListener("click",()=>{
+    superluxuryLevelContainer.classList.add('active');
+});
+superluxuryLevelContainerClose.addEventListener("click",()=>{
+    superluxuryLevelContainer.classList.remove('active');
+});
+
+var swiper = new Swiper(".super-luxury-slider", {
+spaceBetween:20,
+loop:true,
+autoplay:{
+    delay:2500,
+    disableOnInteraction:false,
+},
+breakpoints:{
+    640:{
+        slidesPerView:1,
+    },
+    768:{
+        slidesPerView:2,
+    },
+     1024:{
+        slidesPerView:3,
+    },
+},
+
+});
+/*start vehicale section  */
+var swiper = new Swiper(".superluxury-vehicale-section ", {
+spaceBetween:20,
+loop:true,
+autoplay:{
+    delay:2500,
+    disableOnInteraction:false,
+},
+breakpoints:{
+    640:{
+        slidesPerView:1,
+    },
+    768:{
+        slidesPerView:2,
+    },
+     1024:{
+        slidesPerView:3,
+    },
+},
+
+});
+/*end vehicale section  */
+
+
+/*end super luxury section */
+
+
 /* home section start */
 
 let videoBtn=document.querySelectorAll('.vid-btn');

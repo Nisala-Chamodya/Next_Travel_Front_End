@@ -475,7 +475,7 @@ width: 100%;
 
 
 /***************************************/
-/*start regular conatiner*/
+/*start midlevel conatiner*/
 .midlevel-container{
   position: fixed;
   top: -120%;
@@ -576,9 +576,224 @@ width: 100%;
   background-color: red;
 }
 /* end vehicale Detals*/
-/*end regular conatiner*/
+/*end mid level conatiner*/
 
 /***************************************/
+/*start luxury conatiner*/
+.luxury-container{
+  position: fixed;
+ top: -120%;
+   /*top: 0;*/
+  left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0,0, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+
+}
+
+.luxury-container.active{
+  top: 0;
+ /*top: -120%;*/
+}
+
+.luxury-container .luxury_form{
+  margin: 2rem;
+  padding: 1.5rem 3rem;
+  border-radius: .5rem;
+  background-color: var(--txtcol);
+  width: 75rem;
+  height: 50rem;
+  
+  overflow: hidden;
+  overflow-y: scroll;
+    
+
+  
+}
+
+.luxury-container #luxury-close{
+  position: absolute;
+  top: 2rem; 
+  right: 3rem;
+  font-size: 5rem;
+  color: var(--txtcol);
+  cursor: pointer;
+}
+
+
+.luxury-container .luxury-slider{
+  padding-bottom: 2rem;
+}
+
+.luxury-container  .box{
+   height: 100%;
+  width: 200px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+  border-radius: .5rem;
+ 
+}
+.luxury_form  h3{
+ color: var(--maincol);
+ font-size: 1.7rem;
+}
+
+.luxury-container .box img{
+  height: 13rem;
+  width: 13rem;
+  border-radius: 0%;
+  
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.luxury-container .box h3{
+  color: #333;
+  font-size: 2.5rem;
+}
+.luxury-container .box p{
+  color: #666;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.luxury-container .box .starts i{
+  color:var(--maincol);
+  font-size: 1.7rem;
+}
+
+.swiper-slide .box  i{
+  color: var(--maincol);
+}
+
+.swiper-slide .box  i>p{
+  color: var(--maincol);
+}
+
+
+/* start vehicale Detals*/
+.vehicaledetails::content{
+  background-color: red;
+}
+/* end vehicale Detals*/
+/*end luxury conatiner*/
+
+/**********************************************************/
+
+
+
+
+/***************************************/
+/*start super luxury conatiner*/
+.super-luxury-container{
+  position: fixed;
+ top: -120%;
+ /*  top: 0;*/
+  left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0,0, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+
+}
+
+.super-luxury-container.active{
+  top: 0;
+/* top: -120%;*/
+}
+
+.super-luxury-container .super-luxury_form{
+  margin: 2rem;
+  padding: 1.5rem 3rem;
+  border-radius: .5rem;
+  background-color: var(--txtcol);
+  width: 75rem;
+  height: 50rem;
+  
+  overflow: hidden;
+  overflow-y: scroll;
+    
+
+  
+}
+
+.super-luxury-container #super-luxury-close{
+  position: absolute;
+  top: 2rem; 
+  right: 3rem;
+  font-size: 5rem;
+  color: var(--txtcol);
+  cursor: pointer;
+}
+
+
+.super-luxury-container .super-luxury-slider{
+  padding-bottom: 2rem;
+}
+
+.super-luxury-container  .box{
+   height: 100%;
+  width: 200px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+  border-radius: .5rem;
+ 
+}
+.super-luxury_form  h3{
+ color: var(--maincol);
+ font-size: 1.7rem;
+}
+
+.super-luxury-container .box img{
+  height: 13rem;
+  width: 13rem;
+  border-radius: 0%;
+  
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.super-luxury-container .box h3{
+  color: #333;
+  font-size: 2.5rem;
+}
+.super-luxury-container .box p{
+  color: #666;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+.super-luxury-container .box .starts i{
+  color:var(--maincol);
+  font-size: 1.7rem;
+}
+
+.swiper-slide .box  i{
+  color: var(--maincol);
+}
+
+.swiper-slide .box  i>p{
+  color: var(--maincol);
+}
+
+
+/* start vehicale Detals*/
+.vehicaledetails::content{
+  background-color: red;
+}
+/* end vehicale Detals*/
+/*end luxury conatiner*/
+
+/**********************************************************/
+
+
 
 
 /*media queries*/
