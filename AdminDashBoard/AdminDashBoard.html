@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin DashBoard-Next Travel</title>
+    <!--css-->
+    <link rel="stylesheet" href="css/AdminDashBoard.css">
+    <!--third party -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!--start slider controller-->
+<section id="sidebar">
+        <a href="#" class="brand">
+            <!-- <i class='bx bxs-smile'></i> -->
+            <span class="text logo">Next Travel (Pvt) Ltd</span>
+        </a>
+        <ul class="side-menu top">
+            <li class="active">
+                <a class="dash-btn">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a class="vehi-btn cur-btn">
+                    <i class='bx bxs-shopping-bag-alt'></i>
+                    <span class="text">Vehicle</span>
+                </a>
+            </li>
+            <li>
+                <a class="user-btn cur-btn">
+                    <i class='bx bxs-doughnut-chart'></i>
+                    <span class="text">Users</span>
+                </a>
+            </li>
+            <li>
+                <a class="hotel-btn cur-btn">
+                    <i class='bx bxs-message-dots'></i>
+                    <span class="text">Hotels</span>
+                </a>
+            </li>
+            <li>
+                <a class="guide-btn cur-btn">
+                    <i class='bx bxs-group'></i>
+                    <span class="text">Guides</span>
+                </a>
+            </li>
+            <li>
+                <a class="travel-btn cur-btn">
+                    <i class='bx bxs-group'></i>
+                    <span class="text">Travels</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu bottom">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" id="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+     <!--end slider controller-->
+
+
+     <!--start content type-->
+
+      <nav class="nav-bar">
+        <form class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+        </form>
+        <div class="pro-section">
+            <p class="mx-3 dsah_name">Nisala Chamodya</p>
+            <i class="fa-solid fa-bell fs-3"></i>
+            <div class="pro-img"></div>
+
+        </div>
+    </nav>
+    <section>
+       <div class="content" id="dashboard">
+            <div class="dashboard">
+                <h1>Dashboard</h1>
+                <div class="value-card">
+                    <div class="card-type">
+                        <i class="fa-solid fa-users"></i>
+                        <div class="card-text">
+                            <h3>20</h3>
+                            <p>New Users</p>
+                        </div>
+                    </div>
+                    <div class="card-type">
+                        <i class="fa-solid fa-car new-colors1"></i>
+                        <div class="card-text">
+                            <h3>50</h3>
+                            <p>Vehicles</p>
+                        </div>
+                    </div>
+                    <div class="card-type">
+                        <i class="fa-solid fa-hotel new-colors2"></i>
+                        <div class="card-text">
+                            <h3>60</h3>
+                            <p>Hotels</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--start vehicale part-->
+           <!-- vehicle part -->
+        <div class="content" id="vehicle">
+            <div class="dashboard">
+
+                <div class="search-panel">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end container btn-panel mb-0">
+                        <div class=" search-text">
+                            <input type="text" class="form-control" id="search-text" placeholder="Search">
+                        </div>
+                        <button class="btn btn-primary px-4" type="button"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="topic-section">
+                    <h1 class="heading mt-0 mb-0">Vehicle</h1>
+                    <p class="mb-5 mx-1">Vehicke Deatils</p>
+                </div>
+
+                <div class="vehicle-detail-panel">
+                    <form class="set-id container mb-4 vid-section">
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="mb-2 vehicle-textSize">Vehicle ID</label>
+                                <input type="text" class="form-control" readonly id="vId" placeholder="Vehicle ID">
+                            </div>
+                        </div>
+                    </form>
+                    <form class="set-one container mb-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="mb-2 vehicle-textSize">Vehicle Brand</label>
+                                <input type="text" class="form-control" id="vbrand">
+                            </div>
+                            <div class="form-group col-4">
+                                <label class="mb-2 vehicle-textSize" for="vcategory">Category</label>
+                                <select id="vcategory" class="form-control">
+                                    <option selected>Choose</option>
+                                    <option>Economy</option>
+                                    <option>Mid-Range</option>
+                                    <option>Luxury</option>
+                                    <option>Super Luxury</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-4">
+                                <label class="mb-2 vehicle-textSize" for="ftype">Fuel type</label>
+                                <select id="ftype" class="form-control">
+                                    <option selected>Choose</option>
+                                    <option>Petrol</option>
+                                    <option>Disel</option>
+                                    <option>Electric</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-4">
+                                <label class="mb-2 vehicle-textSize" for="isHybrid">Is Hybrid</label>
+                                <select id="isHybrid" class="form-control">
+                                    <option selected>Choose</option>
+                                    <option>yes</option>
+                                    <option>no</option>
+                                    
+                                </select>
+                            </div>
+                           <div class="col-4">
+                                <label class="mb-2 vehicle-textSize">fuel consumption</label>
+                                <input type="text" id="fusage" class="form-control">
+                            </div>
+                             <div class="col-4">
+                                <label class="mb-2 vehicle-textSize">Seats Capacity</label>
+                                <input type="text" id="seat" class="form-control">
+                            </div>
+                             <div class="form-group col-4">
+                                <label class="mb-2 vehicle-textSize" for="vehiType">Vehicale Type</label>
+                                <select id="vehiType" class="form-control">
+                                    <option selected>Choose</option>
+                                    <option>car</option>
+                                     <option>van</option>
+                                    <option>jeep</option>
+                                    <option>bus</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="set-two container mb-4">
+                        <div class="row">
+                                <div class="col-4">
+                                <label class="mb-2 vehicle-textSize">QTY</label>
+                                <input type="text" id="qty" class="form-control">
+                            </div>
+                            <div class="col-4">
+                                <label class="mb-2 vehicle-textSize">Fee For 1km</label>
+                                <input type="text" id="fee" class="form-control">
+                            </div>
+                           
+                            <div class="form-group col-4">
+                                <label class="mb-2 vehicle-textSize" for="fusage">Transmission Type</label>
+                                <select id="ttype" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>Auto</option>
+                                    <option>Manual</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <form class="set-three container">
+                        <div class="row">
+                            <div class="custom-file col-md-4">
+                                <label class="mb-2 vehicle-textSize">Front Image</label>
+                                <input type="file" class="custom-file-input" id="fimage">
+                                <div class="image-view mt-4 px-4" id="fimage-preview">
+                                    <img src="" id="frontimageplace" class="w-100 py-20">
+                                </div>
+                            </div>
+                            <div class="custom-file col-md-4">
+                                <label class="mb-2 vehicle-textSize">Back Image</label>
+                                <input type="file" class="custom-file-input" id="bimage">
+                                <div class="image-view mt-4 px-4" id="bimage-preview">
+                                    <img src="" id="backimageplace" class="w-100 py-20">
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Driver Details -->
+                <div class="drive-detail">
+                    <h5>Driver Details</h5>
+                    <form class="set-two container">
+                        <div class="row">
+                            <div class="col-4">
+                                <label class="mb-2 vehicle-textSize">Driver Name</label>
+                                <input type="text" id="dname" class="form-control">
+                            </div>
+                            <div class="col-4">
+                                <label class="mb-2 vehicle-textSize">Contact Number</label>
+                                <input type="text" id="dnumber" class="form-control">
+                            </div>
+                            <div class="custom-file col-md-4">
+                                <label class="mb-2 vehicle-textSize">Driver License Font Image</label>
+                                <input type="file" class="custom-file-input" id="dflimage">
+                                <div class="image-view mt-4 px-4" id="limage-preview">
+                                    <img src="" id="dflimageplace" class="w-100 py-20">
+                                </div>
+                            </div>
+                            <div class="custom-file col-md-4">
+                                <label class="mb-2 vehicle-textSize">Driver License Rear Image</label>
+                                <input type="file" class="custom-file-input" id="drlimage">
+                                <div class="image-view mt-4 px-4" id="limage-preview">
+                                    <img src="" id="drlimageplace" class="w-100 py-20">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <label class="mb-2 vehicle-textSize">Remarks</label>
+                                <input type="text" id="remarks" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- button panel -->
+                <div class="btn-panel">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end container">
+                        <button class="btn btn-primary ms-2 px-4" id="vsave-btn" type="button">Save</button>
+                        <button class="btn btn-success px-4" id="vupdate-btn" type="button">Edit</button>
+                        <button class="btn btn-danger px-3 me-md-2" type="button" id="vdelete-btn">Delete</button>
+                        <button class="btn btn-secondary px-3 me-md-2" type="button" id="vreset-btn">Reset</button>
+                    </div>
+                </div>
+
+
+                <div class="container tbl-container">
+                    <div class="table-wrapper">
+                        <table class="table table-striped table-secondary">
+                            <thead>
+                                <tr>
+                                    <th class="px-3">Vehicle Id</th>
+                                    <th class="px-5">Vehicle Brand</th>
+                                    <th class="px-5">Vehicle Category</th>
+                                    <th class="px-5">Fuel Type</th>
+                                    <th class="px-5">Is Hybrid</th>
+                                    <th class="px-5">Fuel consumption</th>
+                                    <th class="px-5">vehicle Font IMG</th>
+                                    <th class="px-5">vehicle Rear IMG</th>
+                                    <th class="px-5">Seat Capacity</th>
+                                    <th class="px-5">Vehicle Type</th>
+                                    <th class="px-5">Transmission Medium</th>
+                                    <th class="px-5">QTY</th>
+                                    <th class="px-5">Fee For 1KM</th>
+                                     <th class="px-5">Driver Name</th>
+                                      <th class="px-5">Driver Contact No</th>
+                                       <th class="px-5">Driver License Font IMG</th>
+                                        <th class="px-5">Driver License Rear IMG</th>
+                                         <th class="px-5">Remarks</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody id="allVehicle-tbl">
+                                <tr>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <!--end vehicale part-->
+
+
+
+
+
+    </section>
+
+
+     <!--end content type-->
+
+
+
+
+    
+
+     <!--start js section-->
+        <!---jquery-->
+           <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+     <!--boostrap-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+        
+
+        <!--dashboard-->
+        <script src="js/AdminDashBoard.js"></script>
+
+        <!--vehicle-->
+        <script src="js/vehicle.js"></script>
+        <!--end js section-->
+</body>
+</html>
