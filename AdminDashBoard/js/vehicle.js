@@ -1,3 +1,4 @@
+loadAllVehicle();
 //start image preview
 document.getElementById("fimage").addEventListener("change", function (event) {
   var input = event.target;
@@ -75,6 +76,16 @@ var vehicleBaseUrl="http://localhost:8003/api/v1/vehicles";
 $("#vsave-btn").click(() => {
  saveVehicle();
 });
+
+$("#vupdate-btn").click(() => {
+  updateVehicle();
+});
+$("#vdelete-btn").click(() => {
+  deleteVehicle();
+});
+$("#vreset-btn").click(() => {
+ clearAll();
+});
 //end data handaling
 
 
@@ -141,6 +152,96 @@ $("#vsave-btn").click(() => {
                      
     
 }
+function updateVehicle(){
+  let id =$("#vId").val();
+  let brand =$("#vbrand").val();
+    let category=$("#vcategory").val();
+    let fuelType=$("#ftype").val();
+    let isHybrid=$("#isHybrid").val();
+    let fuelConsumption=$("#fusage").val();
+   
+    let vehicleFontImg=$("#fimage")[0].files[0];
+   
+    let vehicleRearImg=$("#bimage")[0].files[0];
+    let seatCapacity=$("#seat").val();
+    let vehicleType=$("#vehiType").val();
+    let transmissionMedium=$("#ttype").val();
+    let qty=$("#qty").val();
+    let feeFor1km=$("#fee").val();
+    let driverName=$("#dname").val();
+    let driverContactNo=$("#dnumber").val();
+    let driverLicenseFontImg=$("#dflimage")[0].files[0];
+    let driverLicenseRearImg=$("#drlimage")[0].files[0];
+    let remarks=$("#remarks").val();
+
+
+    const formData=new FormData();
+
+    formData.append("brand",brand);
+     formData.append("category",category);
+      formData.append("fuelType",fuelType);
+       formData.append("isHybrid",isHybrid);
+        formData.append("fuelConsumption",fuelConsumption);
+         formData.append("vehicleFontImg",vehicleFontImg);
+          formData.append("vehicleRearImg",vehicleRearImg);
+           formData.append("seatCapacity",seatCapacity);
+            formData.append("vehicleType",vehicleType);
+             formData.append("transmissionMedium",transmissionMedium);
+              formData.append("qty",qty);
+               formData.append("feeFor1km",feeFor1km);
+                formData.append("driverName",driverName);
+                 formData.append("driverContactNo",driverContactNo);
+                  formData.append("driverLicenseFontImg",driverLicenseFontImg);
+                   formData.append("driverLicenseRearImg",driverLicenseRearImg);
+                    formData.append("remarks",remarks);
+
+                    $.ajax({
+    url: "http://localhost:8003/api/v1/vehicles/"+id,
+    processData: false,
+    contentType: false,
+    cache: false,
+    method: "PUT",
+    data: formData,
+    success: function (res) {
+      
+     
+      
+      if (res.code == 200) {
+        alert(res.message);
+        loadAllVehicle();
+        clearAll();
+      }
+    },
+    error: function (ob) {
+      
+      alert(ob.responseJSON.message);
+    },
+  });
+ 
+}
+function deleteVehicle(){
+   let id = $("#vId").val();
+   
+
+  $.ajax({
+    url: "http://localhost:8003/api/v1/vehicles/"+id,
+    processData: false,
+    contentType: false,
+    cache: false,
+    method: "DELETE",
+    // data: formdata,
+    success: function (res) {
+      if (res.code == 200) {
+        alert(res.message);
+        loadAllVehicle();
+        clearAll();
+      }
+    },
+    error: function (ob) {
+      alert(ob.responseJSON.message);
+    },
+  });
+}
 
 
 //end create crud logic
@@ -150,16 +251,16 @@ function loadAllVehicle(){
   $("#allVehicle-tbl").empty();
 
   $.ajax({
-    url: vehicleBaseUrl,
+    url: "http://localhost:8003/api/v1/vehicles",
     processData: false,
     contentType: false,
     cache: false,
     method: "GET",
     success: function (res) {
-      console.log(res);
+     
 
         for (const vehicle of res.data) {
-         console.log(res.data);
+        
           
        
       let row = `<tr>
@@ -191,6 +292,7 @@ function loadAllVehicle(){
       bindClickEventAll();
     },
     error: function (ob) {
+      
       alert(ob.responseJSON.message);
     },
   });
